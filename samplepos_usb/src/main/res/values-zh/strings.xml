@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SamplePosUsb</string>
+    <string name="print">打印</string>
+    <string name="cutter">切刀</string>
+    <string name="drawer">钱箱</string>
+</resources>

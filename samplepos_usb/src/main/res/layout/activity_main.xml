@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chkCutter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cutter"/>
+
+    <CheckBox
+        android:id="@+id/chkDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/drawer"/>
+
+    <Button
+        android:id="@+id/btnPrint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/print" />
+
+</LinearLayout>
