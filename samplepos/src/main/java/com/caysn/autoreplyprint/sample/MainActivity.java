@@ -153,6 +153,7 @@ public class MainActivity extends Activity implements OnClickListener {
             });
         }
     };
+
     private void AddCallback() {
         AutoReplyPrint.INSTANCE.CP_Port_AddOnPortOpenedEvent(opened_callback, Pointer.NULL);
         AutoReplyPrint.INSTANCE.CP_Port_AddOnPortOpenFailedEvent(openfailed_callback, Pointer.NULL);
@@ -161,6 +162,7 @@ public class MainActivity extends Activity implements OnClickListener {
         AutoReplyPrint.INSTANCE.CP_Printer_AddOnPrinterReceivedEvent(received_callback, Pointer.NULL);
         AutoReplyPrint.INSTANCE.CP_Printer_AddOnPrinterPrintedEvent(printed_callback, Pointer.NULL);
     }
+
     private void RemoveCallback() {
         AutoReplyPrint.INSTANCE.CP_Port_RemoveOnPortOpenedEvent(opened_callback);
         AutoReplyPrint.INSTANCE.CP_Port_RemoveOnPortOpenFailedEvent(openfailed_callback);
@@ -415,6 +417,16 @@ public class MainActivity extends Activity implements OnClickListener {
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         if (null != adapter) {
             if (!adapter.isEnabled()) {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
                 if (!adapter.enable()) {
                     //finish();
                     Toast.makeText(this, "Failed to enable bluetooth adapter", Toast.LENGTH_LONG).show();

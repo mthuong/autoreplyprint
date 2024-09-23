@@ -14,6 +14,7 @@ import java.util.Date;
 class TestFunction {
 
     public static String[] testFunctionOrderedList = new String[]{
+            "Test_Label_DrawBarcode_EAN13",
             "Test_Label_SampleTicket_58MM_1",
             "Test_Label_SampleTicket_58MM_2",
             "Test_Label_SampleTicket_80MM_1",
@@ -51,7 +52,6 @@ class TestFunction {
             "Test_Label_DrawText",
             "Test_Label_DrawBarcode_UPCA",
             "Test_Label_DrawBarcode_UPCE",
-            "Test_Label_DrawBarcode_EAN13",
             "Test_Label_DrawBarcode_EAN8",
             "Test_Label_DrawBarcode_CODE39",
             "Test_Label_DrawBarcode_ITF",
